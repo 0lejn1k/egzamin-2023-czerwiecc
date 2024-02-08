@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cena</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cena.css'>
+    <script src='main1.js'></script>
+</head>
+<body>
+    <div class="main">
+        <header></header>
+        <div class="center">
+            <div class="pipos">
+            <h1>Zapotrzebowanie na farbe</h1>
+                <p>Ile powierzchni malujesz (1L farby to 10m kwadratowych) : </p><input type="number" id="areaInput" placeholder="Wpisz liczbe">
+                <button onclick="calculatePuszek()">Policzyc</button>
+                <p id="resultParagraph"></p>
+
+                <script>
+                    function calculatePuszek() {
+
+                        var area = parseFloat(document.getElementById("areaInput").value);
+
+
+                        if (!isNaN(area)) {
+
+                            var cansNeeded = Math.ceil(area / 10);
+
+
+                            var resultParagraph = document.getElementById("resultParagraph");
+                            resultParagraph.textContent = "liczba potrzebnych puszek: " + cansNeeded;
+                        } else {
+                            alert("Wpisz liczbe!!!");
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
