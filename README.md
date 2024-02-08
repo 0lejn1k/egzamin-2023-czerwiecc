@@ -1,1 +1,0 @@
-# egzamin-2023-czerwiecc
